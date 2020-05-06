@@ -2,23 +2,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
+import {MatFormFieldModule } from '@angular/material/form-field';
+//import {MatInputModule } from '@angular/material/input/input-module';
+import {MatInputModule} from '@angular/material/input';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, componentsForRouting } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NameEditorComponent } from './name-editor/name-editor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NameEditorComponent,
+    componentsForRouting
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    CommonModule
+    CommonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
